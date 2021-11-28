@@ -30,16 +30,16 @@ USE `cloudservices`;
 --
 
 CREATE TABLE `items` (
-  `Id` int(11) NOT NULL COMMENT 'Klucz podstawowy',
-  `Name` text NOT NULL COMMENT 'Nazwa produktu',
-  `Amount` int(11) NOT NULL COMMENT 'Ilość produktu'
+  `id` int(11) NOT NULL COMMENT 'Klucz podstawowy',
+  `name` text NOT NULL COMMENT 'Nazwa produktu',
+  `amount` int(11) NOT NULL COMMENT 'Ilość produktu'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Zrzut danych tabeli `items`
 --
 
-INSERT INTO `items` (`Id`, `Name`, `Amount`) VALUES
+INSERT INTO `items` (`id`, `name`, `amount`) VALUES
 (1, 'Produkt 1', 4),
 (2, 'Produkt 2', 12),
 (3, 'Produkt 5', 0),
@@ -54,7 +54,7 @@ INSERT INTO `items` (`Id`, `Name`, `Amount`) VALUES
 -- Indeksy dla tabeli `items`
 --
 ALTER TABLE `items`
-  ADD PRIMARY KEY (`Id`);
+  ADD PRIMARY KEY (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
